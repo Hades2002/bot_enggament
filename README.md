@@ -9,7 +9,7 @@ Node-cron para ejecutar ciertos eventos en determinados tiempos propuestos por e
 * /add + tu usuario de instagram => para poder agregarte a la lista
 * /edit + tu usuario => para editar tu usuario de la lista
 
-***COMANDOS PARA EL ADMINISTRADOR:**
+**COMANDOS PARA EL ADMINISTRADOR:**
 * /iniciar => inicia la lista manualmente.
 * /finalizar => finalizara manualmente la lista
 * /hora => retornara la hora local donde esta hosteado
@@ -21,8 +21,7 @@ Node-cron ejecutara la hora que le asigne el cliente automaticamente los metodos
 **Que hora es la que va leer, la del servidor o la que nosotros le digamos**
 Si no asignamos un timezone en el evento por defecto leera la zona del servidor en este caso timezone: "America/Argentina/Buenos_Aires"
 
-
-***EXPLICACIONES DE LOS METODOS Y FUNCIONES**
+**EXPLICACIONES DE LOS METODOS Y FUNCIONES**
 * resultado() => Mostrara en pantalla todos los usuarios que se registraron en la lista
 * bienvenido() => Mostrara en pantalla un mensaje de introduccion y como  registrarse...
 * abrirchat() => Puede hablar todo el mundo
