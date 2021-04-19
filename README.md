@@ -19,6 +19,7 @@ Node-cron para ejecutar ciertos eventos en determinados tiempos propuestos por e
 
 ¿Que hace node-cron?
 Node-cron ejecutara la hora que le asigne el cliente automaticamente los metodos abrirchat() y bienvenido() luego de una hora o mas va a cerrarchat() y mostrara todos los usuarios que ingresaron en ese intervalo de tiempo resultado() automaticamente sin la supervision de un humano.
+
 **Que hora es la que va leer, la del servidor o la que nosotros le digamos**
 Si no asignamos un timezone en el evento por defecto leera la zona del servidor en este caso timezone: "America/Argentina/Buenos_Aires"
 
