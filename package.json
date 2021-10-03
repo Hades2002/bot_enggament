@@ -1,20 +1,19 @@
 {
-  "name": "telegram-bot",
+  "name": "bot_enggament",
   "version": "1.0.0",
   "description": "",
-  "main": "bot.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node bot.js",
-    "dev": "nodemon bot.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "node-cron": "^2.0.3",
-    "telegraf": "^3.38.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.6"
+    "dotenv": "^10.0.0",
+    "install": "^0.13.0",
+    "node-cron": "^3.0.0",
+    "node-telegram-bot-api": "^0.54.0",
+    "npm": "^7.24.1"
   }
 }
