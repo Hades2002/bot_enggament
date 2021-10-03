@@ -1,32 +1,39 @@
-# bot_enggament
-Este proyecto fue crear una lista que se inicie y cierre automáticamente y que con un comando pueda ingresar a la lista en ese intervalo de tiempo.
+# **BOT ENGGAMENT**
+### Este proyecto fue crear una lista que se inicie y cierre automáticamente, y ademas con un comando puedan ingresar a la lista en el intervalo de tiempo que le definieron.
 
-Librerias necesitadas telegraf y node-cron
-Node-cron para ejecutar ciertos eventos en determinados tiempos propuestos por el cliente.
+Librerias que necesitaras **node-telegram-bot-api** y **node-cron**
+```
+npm install
+```
+## Tiempo ahorrado 
+**Manualmente:** Se demoran más de una hora, aparte tiene que estar esperando a cada uno si va registrar o no.
+<br>**Con el BOT:** Se **ahorra** mas del **90%** del tiempo. No necesita esperar, lo tiene que colocar un comando. Y la lista se abre, cierra automaticamente.
 
-**COMANDOS PARA EL CLIENTE:**
-* /start => envia un mensaje introductorio.
-* /add + tu usuario de instagram => para poder agregarte a la lista
-* /edit + tu usuario => para editar tu usuario de la lista
+# **COMANDOS PARA EL CLIENTE:**
+```
+/start                         | Envia un mensaje introductorio.
+/add + tu usuario de instagram | Para poder agregarte a la lista
+/edit + tu usuario             | Para editar tu usuario de la lista
+```
 
-
-**COMANDOS PARA EL ADMINISTRADOR:**
-* /iniciar => inicia la lista manualmente.
-* /finalizar => finalizara manualmente la lista
-* /hora => retornara la hora local donde esta hosteado
-* /chatid => retonara el chatid del canal
-
+# **COMANDOS PARA EL ADMINISTRADOR:**
+``` 
+> /starlist | Inicia la lista manualmente.
+> /finalize | Finalizara manualmente la lista
+> /clock    | Retornara la hora local donde esta hosteado
+> /chatid   | Retonara el chatid del canal
+```
 
 **¿Que hace node-cron?**
-**Node-cron** ejecutara la hora que le asigne el cliente automaticamente los metodos **abrirchat()** y **bienvenido()** luego de una hora o mas va a **cerrarchat()** y mostrara todos los usuarios que ingresaron en ese intervalo de tiempo **resultado()** automaticamente sin la supervision de un humano.
+<br>**Node-cron** ejecutara la hora que le asigne el cliente automaticamente todo los metodos **Welcome(chatId)** y **OpenChat(chatId, true)** luego de una hora **OpenChat(chatId, false)**, luego se mostrara todos los usuarios que ingresaron en ese intervalo de tiempo **Result(chatId)** automaticamente sin la supervision de un humano.
 
-**Que hora es la que va leer, la del servidor o la que nosotros le digamos**
-Si no asignamos un timezone en el evento por defecto leera la zona del servidor en este caso timezone: "America/Argentina/Buenos_Aires"
+**Que hora es la que va leer, la del servidor o le podemos definir alguna**
+<br>Si no asignamos un timezone en el evento por defecto leera la zona del servidor pero en este caso timezone: **"America/Argentina/Buenos_Aires"**
 
 
-**EXPLICACIONES DE LOS METODOS Y FUNCIONES**
-* resultado() => Mostrara en pantalla todos los usuarios que se registraron en la lista
-* bienvenido() => Mostrara en pantalla un mensaje de introduccion y como  registrarse...
-* abrirchat() => Puede hablar todo el mundo
-* cerrarchat() => Solamente pueden hablar admins (Este comando es especialmente que cuando se cierra la lista no pueda hablar nadie)
-* verificarid() => Verificara si el mensaje que se mando es del canal oficial, si no es asi por ende no se ejecutara el comando.
+**EXPLICACIONES DE LOS METODOS**
+```
+Result(chatid)         | Mostrara en pantalla todos los usuarios que se registraron en la lista
+Welcome(chatid)        | Mostrara en pantalla un mensaje de introduccion y como  registrarse...
+OpenChat(bool, chatid) | Dar permisos para hablar.
+```
