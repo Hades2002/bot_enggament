@@ -11,9 +11,9 @@ npm install
 
 # **COMANDOS PARA EL CLIENTE:**
 ```
-/start                         | Envia un mensaje introductorio.
-/add + tu usuario de instagram | Para poder agregarte a la lista
-/edit + tu usuario             | Para editar tu usuario de la lista
+> /start                         | Envia un mensaje introductorio.
+> /add + tu usuario de instagram | Para poder agregarte a la lista
+> /edit + tu usuario             | Para editar tu usuario de la lista
 ```
 
 # **COMANDOS PARA EL ADMINISTRADOR:**
