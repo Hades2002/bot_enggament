@@ -18,7 +18,7 @@ npm install
 
 # **COMANDOS PARA EL ADMINISTRADOR:**
 ``` 
-> /starlist | Inicia la lista manualmente.
+> /listopen | Inicia la lista manualmente.
 > /finalize | Finalizara manualmente la lista
 > /clock    | Retornara la hora local donde esta hosteado
 > /chatid   | Retonara el chatid del canal
